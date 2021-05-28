@@ -17,13 +17,10 @@ Output must contain a single number representing the sum of the two integers
 
 **Sample Input and Output**
 
-Input: 323289329329392893 3283928392839283928932329
-
-Output:3283928716128613258325222
-
-Input: 10 99
-
-Output: 109
+Input: 323289329329392893 3283928392839283928932329  
+Output:3283928716128613258325222  
+Input: 10 99  
+Output: 109  
 
 
 
@@ -44,10 +41,7 @@ Print the square root of the number upto 4 decimal places. A difference upto 0.0
 
 **Sample Input and Output**
 
-Input: 5
-
-Output: 2.2361
-
-Input: 25
-
-Output: 5.0000
+Input: 5  
+Output: 2.2361  
+Input: 25  
+Output: 5.0000  
