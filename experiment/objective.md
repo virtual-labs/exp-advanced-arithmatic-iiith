@@ -1,1 +1,1 @@
-To learn to solve problems related to Advanced Arithmatic using Computer Programming. 
+- To learn to solve problems related to Advanced Arithmatic using Computer Programming. 
