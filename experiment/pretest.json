@@ -1,48 +1,175 @@
-[
-{"question":"1. The execution of a loop typically starts with:",
-"answers":{
-            "a":"initialization statements",
-            "b":"Loop body",
-            "c":"test condition",
-            "d":"update statements"
-          },
-"correctAnswer":"a"},
-
-{"question":"2. The break statement is used to exit from:",
-"answers":{
-            "a":"an if statement",
-            "b":"a for loop",
-            "c":"a program",
-            "d":"the main( ) function"
-          },
-"correctAnswer":"b"}, 
-
-{"question":"3. A do-while loop is useful when we want that the statements within the loop must be executed",
-"answers":{
-            "a":"only once",
-            "b":"At Least Once",
-            "c":"More than once",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
-
-{"question":"4. In what sequence the initialization, testing and execution of body is done in a do-while loop ",
-"answers":{
-            "a":"Initialization, execution of body, testing",
-            "b":"Execution of body, initialization, testing",
-            "c":"Initialization, testing, execution of body",
-            "d":"None of the above"
-          },
-"correctAnswer":"a"},
-
-{"question":"5. Which looping process checks the test condition at the end of the loop?",
-"answers":{
-            "a":"for",
-            "b":"while",
-            "c":"do-while",
-            "d":"No looping peocess check condition at the end"
-          },
-"correctAnswer":"c"}
-
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Why can't standard integer types store numbers like 10^50?",
+      "answers": {
+        "a": "They only store characters",
+        "b": "They are not used in programming",
+        "c": "They have limited storage size",
+        "d": "They can store any number"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Integers do not store characters.",
+        "b": "Incorrect. Integers are widely used in programming.",
+        "c": "Correct. Standard types have fixed size and can't store very large numbers.",
+        "d": "Incorrect. There is a maximum value for each type."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is the main idea behind adding two large numbers stored as strings?",
+      "answers": {
+        "a": "Add digits from left to right only",
+        "b": "Convert strings to integers and add",
+        "c": "Ignore carry over",
+        "d": "Add digits from right to left, carrying over as needed"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Addition is typically done from right to left.",
+        "b": "Incorrect. Large numbers can't be converted to standard integers.",
+        "c": "Incorrect. Carry over is essential.",
+        "d": "Correct. Addition is done digit by digit from right to left, carrying over."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is a valid reason to use binary search for square root calculation?",
+      "answers": {
+        "a": "It checks every possible value",
+        "b": "It efficiently narrows down the possible values",
+        "c": "It is slower than linear search",
+        "d": "It only works for small numbers"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Binary search does not check every value.",
+        "b": "Correct. Binary search quickly reduces the search interval.",
+        "c": "Incorrect. Binary search is faster than linear search.",
+        "d": "Incorrect. Binary search works for large numbers too."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the time complexity of binary search for finding square roots?",
+      "answers": {
+        "a": "O(N)",
+        "b": "O(1)",
+        "c": "O(N^2)",
+        "d": "O(log N)"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Linear search is O(N).",
+        "b": "Incorrect. Constant time is not possible for arbitrary N.",
+        "c": "Incorrect. Quadratic time is too slow.",
+        "d": "Correct. Each step halves the interval, so it's logarithmic."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which of the following is NOT a challenge when adding large numbers as strings?",
+      "answers": {
+        "a": "Memory limitations",
+        "b": "Handling carry over",
+        "c": "Digit alignment",
+        "d": "Using built-in integer addition"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Large numbers may require more memory.",
+        "b": "Incorrect. Carry over must be handled.",
+        "c": "Incorrect. Digits must be aligned for addition.",
+        "d": "Correct. Built-in addition can't be used for very large numbers."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. What is the output of adding 999...999 (50 nines) and 1?",
+      "answers": {
+        "a": "999...999 (50 nines)",
+        "b": "1",
+        "c": "1000...000 (1 followed by 50 zeros)",
+        "d": "0"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. That's the original number.",
+        "b": "Incorrect. The sum is much larger.",
+        "c": "Correct. Adding 1 to all nines results in a 1 followed by zeros.",
+        "d": "Incorrect. The sum is not zero."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which of the following is true about floating-point precision in square root calculation?",
+      "answers": {
+        "a": "Results are always exact",
+        "b": "Results may not be exact due to rounding",
+        "c": "Precision does not matter",
+        "d": "Binary search cannot be used"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Results are not always exact.",
+        "b": "Correct. Floating-point results are rounded to a certain precision.",
+        "c": "Incorrect. Precision is important for accuracy.",
+        "d": "Incorrect. Binary search works for floating-point values."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. What is the main application of large number arithmetic in cryptography?",
+      "answers": {
+        "a": "Encrypting and decrypting data securely",
+        "b": "Sorting numbers",
+        "c": "Finding the maximum value",
+        "d": "Printing numbers"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Cryptography relies on arithmetic with very large numbers.",
+        "b": "Incorrect. Sorting is not specific to cryptography.",
+        "c": "Incorrect. Maximum value is not the main application.",
+        "d": "Incorrect. Printing is not the main application."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which of the following is a limitation of using strings for arithmetic?",
+      "answers": {
+        "a": "Slower operations compared to built-in types",
+        "b": "Unlimited precision",
+        "c": "No need for carry over",
+        "d": "Automatic type conversion"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. String-based arithmetic is slower than using integers.",
+        "b": "Incorrect. Precision is limited by memory, not truly unlimited.",
+        "c": "Incorrect. Carry over is still needed.",
+        "d": "Incorrect. Type conversion is not automatic."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "10. Which of the following is the best reason to use binary search for square root calculation instead of trial division?",
+      "answers": {
+        "a": "It is much faster for large numbers",
+        "b": "It always gives an exact answer",
+        "c": "It is easier to code",
+        "d": "It does not require any arithmetic"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Binary search is efficient for large numbers.",
+        "b": "Incorrect. It may not always be exact due to floating-point rounding.",
+        "c": "Incorrect. Coding difficulty is not the main reason.",
+        "d": "Incorrect. Arithmetic is required for the calculation."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

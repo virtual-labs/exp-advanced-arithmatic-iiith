@@ -1,12 +1,76 @@
-**Problem 1**  
+Advanced arithmetic is essential in computer science for handling numbers and calculations that go beyond the limitations of standard data types. Many real-world problems require working with very large numbers or implementing efficient algorithms for arithmetic operations. In this experiment, you will learn how to represent, manipulate, and compute with large numbers and apply efficient methods for arithmetic tasks.
 
-If numbers are to big to fit into standard data types, then we can use strings to store the number. In this case, addition of two number would require doing digit by digit addition along with required carry over getting transferred to the next higher order cell. Lets suppose that the longer of two of the input numbers is of length L. Then the size of the result would be at maximum L+1. Now, for doing addition, you need to place two separate indices at the end of the two numbers annd do an addition of the two digits there. Beware that the two digits are stored in character format, so subtract 10 from each of them before adding them. If this addition results in a number greater than 10, then write down the unit digit of the result in right most cell of the result string and note down the carry forward. If the result of the addition is less than 10 then then no need to worry about the carry forward. Now repeat this process by having moved all the three indices one place to the left, and keep repeating till the longer of the two numbers is traversed. If one of the input number runs out of digits then assume it to be supplying 0. Finally, output the result string on the screen.  
+---
 
+### Why Study Advanced Arithmetic?
 
-**Problem 2**  
+- Many scientific, cryptographic, and financial applications require calculations with numbers larger than those supported by built-in types.
+- Efficient arithmetic algorithms are the foundation of high-performance computing and accurate scientific results.
+- Understanding these techniques helps you solve a wide range of computational problems and prepares you for advanced topics in algorithms and number theory.
 
-A number x is said to be a square root of N if x*x=N.Thus is it quite obvious that the square root a positive integer > 1 lies in between [1 N]. Suppose P is a number such that P*P > N then the result must be in the interval [1 P-1] oterwise if P*P < N then the result lies in [P+1 N]. We use this idea to find the square root of a positive integer. Suppose we know that the square root lies in between (start,end).If mid = (start+end)/2.0, depending upon the value of mid*mid-N we chose either (mid+1,end) or (start,mid-1) as our next search interval or conclude that mid is the square root of N.While coding do take care of the fact of precision since mid*mid may not be exactly equal N.  
+---
 
-**Time complexity**
+### Problems Explored in This Experiment
 
-If you analyze the number of operations it takes this function to run it is easy to see that it will take logN (logN to base 2) operations. At every step of the search we chose either (start,mid-1) or (mid+1,end) which means the interval size gets reduced by half. Initially the range is N, in the next step it will become N/2, then N/4, and so after x steps the search range will be N/(2^x) which will be 1 when x is logN. So, the number of iterations is log(N). 
+In this experiment, you will solve two classic problems using advanced arithmetic techniques:
+
+### 1. Addition of Large Numbers
+
+**Problem Statement:**
+Add two large positive integers (up to $10^{50}$ digits) that cannot be stored in standard integer types.
+
+**Input Specification:**
+
+- Two positive integers (each $< 10^{50}$) separated by a space.
+
+**Output Specification:**
+
+- Output a single number representing the sum of the two integers.
+
+**Sample Input and Output:**
+
+```
+Input: 323289329329392893 3283928392839283928932329
+Output: 3283928716128613258325222
+Input: 10 99
+Output: 109
+```
+
+**How to Add Large Numbers:**
+When numbers are too big to fit into standard data types, store them as strings and perform digit-by-digit addition, carrying over as needed. Start from the least significant digit, add corresponding digits (and carry), and build the result from right to left. If one number runs out of digits, treat it as zero.
+
+---
+
+### 2. Square Root Calculation Using Binary Search
+
+![Square root symbol](./images/experiment-image.png)
+
+**Problem Statement:**
+Find the square root of a positive integer $N$ (up to $10^9$) using binary search, accurate to four decimal places.
+
+**Input Specification:**
+
+- A single positive integer $N$ ($N < 10^9$).
+
+**Output Specification:**
+
+- Print the square root of the number up to 4 decimal places. A difference up to 0.001 from the correct value is accepted.
+
+**Sample Input and Output:**
+
+```
+Input: 5
+Output: 2.2361
+Input: 25
+Output: 5.0000
+```
+
+**How Binary Search Finds Square Roots:**
+The square root of $N$ lies between 1 and $N$. The image above represents the mathematical square root operation, which you will compute programmatically in this problem. Use binary search to repeatedly narrow the interval: if $mid^2 > N$, search the left half; if $mid^2 < N$, search the right half. Continue until the interval is small enough for the required precision.
+
+**Time Complexity:**
+Binary search reduces the interval by half each step, so the number of steps is $O(\log N)$.
+
+---
+
+_This experiment encourages you to implement algorithms for large number addition and efficient square root calculation, deepening your understanding of advanced arithmetic and its applications in computational problem solving._

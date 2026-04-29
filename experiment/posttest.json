@@ -1,48 +1,175 @@
-[
-{"question":"1. A continue statement causes execution to skip to:",
-"answers":{
-            "a":"the end of the program",
-            "b":"the first statement after the loop",
-            "c":"the statement following the continue statement",
-            "d":"the next iteration of the loop"
-          },
-"correctAnswer":"d"},
-
-{"question":"2. The statement i++; is equivalent to:",
-"answers":{
-            "a":"i = i + i;",
-            "b":"i = i + 1;",
-            "c":"i = i - 1;",
-            "d":"i - - ;"
-          },
-"correctAnswer":"b"},
-
-{"question":"3. Another word for 'looping' is:",
-"answers":{
-            "a":"recapitulation ",
-            "b":"tintinabulation ",
-            "c":"iteration",
-            "d":"reiteration"
-          },
-"correctAnswer":"c"},
-
-{"question":"4. Which looping process is best used when the number of iterations is known?",
-"answers":{
-            "a":"for",
-            "b":"while",
-            "c":"do-while",
-            "d":"all of the above"
-          },
-"correctAnswer":"a"},
-
-{"question":"5.  Which of the following is not an infinite loop.",
-"answers":{
-            "a":"int i = 1 ; while ( 1 ) { i++ ; }",
-            "b":"for( int i =1; i < 10 ; i--) printf('Hello World');",
-            "c":"for(int i =1; i<100; i++) printf('Hello World');",
-            "d":"int i = 0; do{ i-- printf('%d ',i); }while(i>0);"
-          },
-"correctAnswer":"c"}
-
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the first step when adding two large numbers stored as strings?",
+      "answers": {
+        "a": "Convert to integers",
+        "b": "Add from the left",
+        "c": "Align the digits from the right",
+        "d": "Ignore carry over"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Large numbers may not fit in integer types.",
+        "b": "Incorrect. Addition is done from right to left.",
+        "c": "Correct. Digits must be aligned from the right for addition.",
+        "d": "Incorrect. Carry over is essential."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In binary search for square root, what condition determines if you search the left half?",
+      "answers": {
+        "a": "If mid*mid < N",
+        "b": "If mid*mid > N",
+        "c": "If mid = N",
+        "d": "If mid is odd"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. That means the answer is in the right half.",
+        "b": "Correct. If mid squared is greater than N, search the left half.",
+        "c": "Incorrect. This is the exact answer, not a search condition.",
+        "d": "Incorrect. Oddness is irrelevant."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is the result of adding 12345678901234567890 and 98765432109876543210 as strings?",
+      "answers": {
+        "a": "111111111101111111100",
+        "b": "11111111101111111110",
+        "c": "110000000011000000100",
+        "d": "111111111011111111100"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Check the addition carefully.",
+        "b": "Incorrect. Too few digits.",
+        "c": "Incorrect. Not the correct sum.",
+        "d": "Correct. The sum is 111111111011111111100."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Why is floating-point precision important in square root calculation?",
+      "answers": {
+        "a": "To make the code shorter",
+        "b": "To ensure the answer is accurate to the required decimal places",
+        "c": "To avoid using loops",
+        "d": "To use more memory"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Code length is not the reason.",
+        "b": "Correct. Precision ensures the answer meets the required accuracy.",
+        "c": "Incorrect. Loops are still used.",
+        "d": "Incorrect. Precision does not require more memory."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which of the following is the best way to handle carry over in large number addition?",
+      "answers": {
+        "a": "Ignore carry over",
+        "b": "Add all digits and divide by 10",
+        "c": "Subtract carry from the result",
+        "d": "Add corresponding digits and keep track of carry"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Ignoring carry gives wrong results.",
+        "b": "Incorrect. Division is not the method.",
+        "c": "Incorrect. Carry is added, not subtracted.",
+        "d": "Correct. Carry must be tracked and added to the next digit."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. What is the main advantage of using binary search for square root over trial division?",
+      "answers": {
+        "a": "It is easier to implement",
+        "b": "It is much faster for large N",
+        "c": "It always gives an exact answer",
+        "d": "It uses less memory"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Implementation is not the main advantage.",
+        "b": "Correct. Binary search is efficient for large numbers.",
+        "c": "Incorrect. Floating-point answers may not be exact.",
+        "d": "Incorrect. Memory usage is not the main advantage."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. Which application relies heavily on large number arithmetic?",
+      "answers": {
+        "a": "Sorting small arrays",
+        "b": "Printing numbers",
+        "c": "Cryptography",
+        "d": "Finding minimum value"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Sorting small arrays does not require large numbers.",
+        "b": "Incorrect. Printing is unrelated.",
+        "c": "Correct. Cryptography uses very large numbers for security.",
+        "d": "Incorrect. Minimum value does not require large numbers."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. What is a limitation of using strings for arithmetic operations?",
+      "answers": {
+        "a": "Slower performance compared to integers",
+        "b": "Unlimited speed",
+        "c": "No need for carry over",
+        "d": "Automatic error correction"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. String operations are slower than integer arithmetic.",
+        "b": "Incorrect. String operations are not faster.",
+        "c": "Incorrect. Carry over is still needed.",
+        "d": "Incorrect. Errors are not corrected automatically."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which of the following is true about the result of binary search for square root?",
+      "answers": {
+        "a": "It is accurate up to the required decimal places",
+        "b": "It is always an integer",
+        "c": "It is always exact",
+        "d": "It cannot be used for large N"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The result is accurate to the specified precision.",
+        "b": "Incorrect. The square root may not be an integer.",
+        "c": "Incorrect. Floating-point results are not always exact.",
+        "d": "Incorrect. Binary search works for large N."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "10. What is the main reason to analyze the efficiency of arithmetic algorithms?",
+      "answers": {
+        "a": "To ensure they work quickly for large inputs",
+        "b": "To make the code longer",
+        "c": "To use more memory",
+        "d": "To avoid using arithmetic"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Efficiency is crucial for large-scale computations.",
+        "b": "Incorrect. Code length is not the goal.",
+        "c": "Incorrect. Using more memory is not desirable.",
+        "d": "Incorrect. Arithmetic is necessary."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
