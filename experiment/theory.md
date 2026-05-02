@@ -43,7 +43,7 @@ When numbers are too big to fit into standard data types, store them as strings 
 
 ### 2. Square Root Calculation Using Binary Search
 
-![Square root symbol](./images/experiment-image.png)
+<img src="./images/experiment-image.png" alt="Square root symbol" width="300" />
 
 **Problem Statement:**
 Find the square root of a positive integer $N$ (up to $10^9$) using binary search, accurate to four decimal places.
